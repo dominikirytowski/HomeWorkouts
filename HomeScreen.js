@@ -1,4 +1,5 @@
 import 'react-native-gesture-handler';
+//import 'react-native-reanimated';
 import React, {Component} from 'react';
 import {
   View,
@@ -8,6 +9,7 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
+import Toolbar from './Toolbar';
 import styles from './styles';
 
 const DATA = [
@@ -47,27 +49,28 @@ class HomeScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.container}>
-          <ScrollView>
-            <SafeAreaView>
-              <FlatList
-                keyExtractor={item => item.id}
-                data={DATA}
-                renderItem={({item}) => (
-                  <TouchableOpacity
-                    onPress={() => {
-                      this.state.navigation.navigate(item.title, {
-                        title: item.title,
-                      });
-                    }}
-                    style={styles.listItem}>
-                    <Text>{item.title}</Text>
-                  </TouchableOpacity>
-                )}
-              />
-            </SafeAreaView>
+        {Toolbar(this.state.navigation, 'Home')}
+        <SafeAreaView style={styles.safeArea}>
+          <ScrollView
+            style={styles.scrollview}
+            contentContainerStyle={styles.scrollContainer}>
+            <FlatList
+              keyExtractor={item => item.id}
+              data={DATA}
+              renderItem={({item}) => (
+                <TouchableOpacity
+                  onPress={() => {
+                    this.state.navigation.navigate(item.title, {
+                      title: item.title,
+                    });
+                  }}
+                  style={styles.listItem}>
+                  <Text>{item.title}</Text>
+                </TouchableOpacity>
+              )}
+            />
           </ScrollView>
-        </View>
+        </SafeAreaView>
         <View style={styles.footer}>
           <Text>Footer</Text>
         </View>

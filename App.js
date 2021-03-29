@@ -7,9 +7,10 @@
  */
 
 import 'react-native-gesture-handler';
+//import 'react-native-reanimated';
 import React, {Component} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 
 import HomeScreen from './HomeScreen';
 import WorkoutScreen from './WorkoutScreen';
@@ -41,17 +42,17 @@ const DATA = [
   },
 ];
 
-const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
 class App extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home" toolbar>
-          <Stack.Screen name="Home" component={HomeScreen} />
+        <Drawer.Navigator initialRouteName="Home">
+          <Drawer.Screen name="Home" component={HomeScreen} />
           {DATA.map(n => (
-            <Stack.Screen name={n.title} component={WorkoutScreen} />
+            <Drawer.Screen name={n.title} component={WorkoutScreen} />
           ))}
-        </Stack.Navigator>
+        </Drawer.Navigator>
       </NavigationContainer>
     );
   }

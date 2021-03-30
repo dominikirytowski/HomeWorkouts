@@ -4,31 +4,32 @@ import {View, TouchableOpacity, Text, Image} from 'react-native';
 import {DrawerContentScrollView} from '@react-navigation/drawer';
 import styles from './styles/styles_drawer';
 
-const DATA = [
+const TRAININGS = [
   {
-    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-    title: 'First Item',
+    id: '1',
+    title: 'Całe ciało',
   },
   {
-    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-    title: 'Second Item',
+    id: '2',
+    title: 'Mięśnie brzucha',
   },
   {
-    id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Third Item',
+    id: '3',
+    title: 'Klatka piersiowa',
+  },
+  /*
+  {
+    id: '4',
+    title: 'Ramiona',
   },
   {
-    id: '581239aa0f-3da1-471f-bd96-145571e29d72',
-    title: 'Fourth Item',
+    id: '5',
+    title: 'Nogi',
   },
   {
-    id: '5869123a0f-3da1-471f-bd96-1451231e29d72',
-    title: 'Fifth Item',
-  },
-  {
-    id: '58694a120f-3da1-47112f-bd96-141241e29d72',
-    title: 'Sixth Item',
-  },
+    id: '6',
+    title: 'Barki i plecy',
+  },*/
 ];
 
 class CustomDrawerContent extends Component {
@@ -57,7 +58,7 @@ class CustomDrawerContent extends Component {
             <Text>Home</Text>
           </TouchableOpacity>
         </View>
-        {DATA.map(n => (
+        {TRAININGS.map(n => (
           <TouchableOpacity
             style={styles.drawerOption}
             onPress={() => {

@@ -10,7 +10,7 @@ import {
   Text,
 } from 'react-native';
 import Toolbar from './Toolbar';
-import styles from './styles';
+import styles from './styles/styles';
 
 const DATA = [
   {

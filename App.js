@@ -12,6 +12,7 @@ import React, {Component} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 
+import CustomDrawerContent from './CustomDrawerContent';
 import HomeScreen from './HomeScreen';
 import WorkoutScreen from './WorkoutScreen';
 
@@ -47,7 +48,9 @@ class App extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Navigator
+          initialRouteName="Home"
+          drawerContent={props => <CustomDrawerContent {...props} />}>
           <Drawer.Screen name="Home" component={HomeScreen} />
           {DATA.map(n => (
             <Drawer.Screen name={n.title} component={WorkoutScreen} />

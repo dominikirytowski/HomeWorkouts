@@ -1,27 +1,6 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  drawerButton: {
-    paddingLeft: 5,
-    paddingRight: 5,
-    paddingBottom: 2,
-    paddingTop: 2,
-    borderColor: 'black',
-    borderWidth: 1,
-    backgroundColor: 'lightgrey',
-  },
-  radius: {
-    borderRadius: 5,
-  },
-  toolbar: {
-    flex: 1,
-    backgroundColor: 'white',
-    borderColor: 'black',
-    borderBottomWidth: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingLeft: 15,
-  },
   scrollContainerExercises: {
     flex: 1,
     flexDirection: 'row',

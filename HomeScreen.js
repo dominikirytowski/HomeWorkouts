@@ -8,6 +8,7 @@ import {
   FlatList,
   TouchableOpacity,
   Text,
+  Image,
 } from 'react-native';
 import Toolbar from './Toolbar';
 import styles from './styles/styles';
@@ -16,14 +17,17 @@ const TRAININGS = [
   {
     id: '1',
     title: 'Całe ciało',
+    img: require('./imgs/fullbody.png')
   },
   {
     id: '2',
     title: 'Mięśnie brzucha',
+    img: require('./imgs/belly.png')
   },
   {
     id: '3',
     title: 'Klatka piersiowa',
+    img: require('./imgs/chest.png')
   },
   /*
   {
@@ -39,6 +43,12 @@ const TRAININGS = [
     title: 'Barki i plecy',
   },*/
 ];
+
+/*const[images, setImages] = useState([
+  require('./imgs/fullbody.png'),
+  require('./imgs/belly.png'),
+  require('./imgs/chest.png')
+]); */
 
 class HomeScreen extends Component {
   constructor(props) {
@@ -67,7 +77,8 @@ class HomeScreen extends Component {
                     });
                   }}
                   style={styles.listItem}>
-                  <Text>{item.title}</Text>
+                  <Text style={{textAlign: 'center'}}>{item.title}</Text>
+                  <Image source = {item.img} resizeMode='contain' style={styles.listItem}/>
                 </TouchableOpacity>
               )}
             />

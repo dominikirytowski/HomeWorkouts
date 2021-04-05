@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import styles from './styles/styles';
 import Toolbar from './Toolbar';
+import YoutubePlayer from 'react-native-youtube-iframe';
 
 const EXERCISES = [
   {
@@ -22,96 +23,112 @@ const EXERCISES = [
         title: 'First Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.2',
         title: 'Second Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.3',
         title: 'Third Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.4',
         title: 'Fourth Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.5',
         title: 'Fifth Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.6',
         title: 'Sixth Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.7',
         title: 'Seventh Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.8',
         title: 'Eight Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.9',
         title: 'Ninth Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.10',
         title: 'Tenth Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.111',
         title: 'Eleventh Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.12',
         title: 'Twelfth Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.13',
         title: 'Thirteenth Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.14',
         title: 'Fourteenth Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.15',
         title: 'Fifteenth Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '1.16',
         title: 'Sixteenth Item',
         time: 30,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
     ],
     time: 20,
@@ -125,96 +142,112 @@ const EXERCISES = [
         title: 'Jumping jacks',
         time: 30,
         reps: 0,
+        video: 'iSSAk4XCsRA'
       },
       {
         id: '2.2',
         title: 'Abdominal crunches',
         time: 0,
         reps: 16,
+        video: '_YVhhXc2pSY'
       },
       {
         id: '2.3',
         title: 'Russian twist',
         time: 0,
         reps: 20,
+        video: 'wkD8rjkodUI'
       },
       {
         id: '2.4',
         title: 'Mountain climber',
         time: 0,
         reps: 16,
+        video: 'nmwgirgXLYM'
       },
       {
         id: '2.5',
         title: 'Heel touch',
         time: 0,
         reps: 20,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '2.6',
         title: 'Leg raises',
         time: 0,
         reps: 16,
+        video: 'JB2oyawG9KI'
       },
       {
         id: '2.7',
         title: 'Plank',
         time: 30,
         reps: 0,
+        video: 'pSHjTRCQxIw'
       },
       {
         id: '2.8',
         title: 'V-ups',
         time: 0,
         reps: 12,
+        video: 'iP2fjvG0g3w'
       },
       {
         id: '2.9',
         title: 'Plank',
         time: 30,
         reps: 0,
+        video: 'pSHjTRCQxIw'
       },
       {
         id: '2.10',
         title: 'Abdominal crunches',
         time: 0,
         reps: 12,
+        video: 'Xyd_fa5zoEU'
       },
       {
         id: '2.11',
         title: 'Leg raises',
         time: 0,
         reps: 10,
+        video: 'JB2oyawG9KI'
       },
       {
         id: '2.12',
         title: 'Heel touch',
         time: 0,
         reps: 16,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '2.13',
         title: 'Side leg raises',
         time: 0,
         reps: 10,
+        video: 'jgh6sGwtTwk'
       },
       {
         id: '2.14',
         title: 'Cobra stretch',
         time: 30,
         reps: 0,
+        video: 'JDcdhTuycOI'
       },
       {
         id: '2.15',
         title: 'Spine lumbar twist stretch left',
         time: 30,
         reps: 0,
+        video: 'BzYBkAvdCJY'
       },
       {
         id: '2.16',
         title: 'Spine lumbar twist stretch right',
         time: 30,
         reps: 0,
+        video: 'BzYBkAvdCJY'
       },
     ],
     time: 16,
@@ -228,84 +261,98 @@ const EXERCISES = [
         title: 'Jumping jacks',
         time: 30,
         reps: 0,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '3.2',
         title: 'Knee push-ups',
         time: 0,
         reps: 12,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '3.3',
         title: 'push-ups',
         time: 0,
         reps: 12,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '3.4',
         title: 'Wide arm push-ups',
         time: 0,
         reps: 16,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '3.5',
         title: 'Hindu push-ups',
         time: 0,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '3.5',
         title: 'Staggered push-ups',
         time: 0,
         reps: 12,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '3.6',
         title: 'Push-up & rotation',
         time: 0,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '3.7',
         title: 'Knee push-ups',
         time: 0,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '3.8',
         title: 'Hindu push-ups',
         time: 0,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '3.9',
         title: 'Decline push-ups',
         time: 0,
         reps: 12,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '3.10',
         title: 'Staggered push-ups',
         time: 0,
         reps: 10,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '3.11',
         title: 'Shoulder stretch',
         time: 30,
         reps: 0,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '3.12',
         title: 'Cobra stretch',
         time: 30,
         reps: 0,
+        video: 'fLajmFLpJ_w'
       },
       {
         id: '3.13',
         title: 'Chest stretch',
         time: 30,
         reps: 0,
+        video: 'fLajmFLpJ_w'
       },
     ],
     time: 24,
@@ -658,6 +705,11 @@ class WorkoutScreen extends Component {
               renderItem={({item}) => (
                 <View style={styles.exerciseItem}>
                   <Text>{item.title}</Text>
+                  <YoutubePlayer
+                    height = {300}
+                    play = {false}
+                    videoId = {item.video}
+                 />
                 </View>
               )}
             />

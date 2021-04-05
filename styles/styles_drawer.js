@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     resizeMode: 'stretch',
   },
   drawerScroll: {
-    backgroundColor: 'grey',
+    backgroundColor: '#09A62B',
     color: 'red',
     borderColor: 'black',
     borderWidth: 1,
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   drawerOption: {
-    backgroundColor: 'lightgrey',
+    backgroundColor: '#009791',
     alignItems: 'center',
     paddingLeft: 20,
     justifyContent: 'center',

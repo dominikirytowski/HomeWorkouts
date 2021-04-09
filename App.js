@@ -157,112 +157,112 @@ const EXERCISES = [
         title: 'Jumping jacks',
         time: 30,
         reps: 0,
-        video: 'iSSAk4XCsRA'
+        video: 'iSSAk4XCsRA',
       },
       {
         id: '2.2',
         title: 'Abdominal crunches',
         time: 0,
         reps: 16,
-        video: '_YVhhXc2pSY'
+        video: '_YVhhXc2pSY',
       },
       {
         id: '2.3',
         title: 'Russian twist',
         time: 0,
         reps: 20,
-        video: 'wkD8rjkodUI'
+        video: 'wkD8rjkodUI',
       },
       {
         id: '2.4',
         title: 'Mountain climber',
         time: 0,
         reps: 16,
-        video: 'nmwgirgXLYM'
+        video: 'nmwgirgXLYM',
       },
       {
         id: '2.5',
         title: 'Heel touch',
         time: 0,
         reps: 20,
-        video: 'fLajmFLpJ_w'
+        video: 'fLajmFLpJ_w',
       },
       {
         id: '2.6',
         title: 'Leg raises',
         time: 0,
         reps: 16,
-        video: 'JB2oyawG9KI'
+        video: 'JB2oyawG9KI',
       },
       {
         id: '2.7',
         title: 'Plank',
         time: 30,
         reps: 0,
-        video: 'pSHjTRCQxIw'
+        video: 'pSHjTRCQxIw',
       },
       {
         id: '2.8',
         title: 'V-ups',
         time: 0,
         reps: 12,
-        video: 'iP2fjvG0g3w'
+        video: 'iP2fjvG0g3w',
       },
       {
         id: '2.9',
         title: 'Plank',
         time: 30,
         reps: 0,
-        video: 'pSHjTRCQxIw'
+        video: 'pSHjTRCQxIw',
       },
       {
         id: '2.10',
         title: 'Abdominal crunches',
         time: 0,
         reps: 12,
-        video: 'Xyd_fa5zoEU'
+        video: 'Xyd_fa5zoEU',
       },
       {
         id: '2.11',
         title: 'Leg raises',
         time: 0,
         reps: 10,
-        video: 'JB2oyawG9KI'
+        video: 'JB2oyawG9KI',
       },
       {
         id: '2.12',
         title: 'Heel touch',
         time: 0,
         reps: 16,
-        video: 'fLajmFLpJ_w'
+        video: 'fLajmFLpJ_w',
       },
       {
         id: '2.13',
         title: 'Side leg raises',
         time: 0,
         reps: 10,
-        video: 'jgh6sGwtTwk'
+        video: 'jgh6sGwtTwk',
       },
       {
         id: '2.14',
         title: 'Cobra stretch',
         time: 30,
         reps: 0,
-        video: 'JDcdhTuycOI'
+        video: 'JDcdhTuycOI',
       },
       {
         id: '2.15',
         title: 'Spine lumbar twist stretch left',
         time: 30,
         reps: 0,
-        video: 'BzYBkAvdCJY'
+        video: 'BzYBkAvdCJY',
       },
       {
         id: '2.16',
         title: 'Spine lumbar twist stretch right',
         time: 30,
         reps: 0,
-        video: 'BzYBkAvdCJY'
+        video: 'BzYBkAvdCJY',
       },
     ],
   },

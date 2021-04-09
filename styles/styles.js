@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     borderColor: 'grey',
     backgroundColor: '#F5F8FA',
     flexBasis: '100%',
-    height: 500,
+    height: 100,
   },
   timeText: {
     fontSize: 16,

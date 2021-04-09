@@ -62,7 +62,7 @@ class CustomDrawerContent extends Component {
           <TouchableOpacity
             style={styles.drawerOption}
             onPress={() => {
-              navigation.navigate(n.title, {title: n.title});
+              navigation.navigate(n.title, {title: n.title, exercisesId: n.id});
             }}>
             <Text>{n.title}</Text>
           </TouchableOpacity>

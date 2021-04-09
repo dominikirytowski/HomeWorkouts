@@ -17,17 +17,17 @@ const TRAININGS = [
   {
     id: '1',
     title: 'Całe ciało',
-    img: require('./imgs/fullbody.png')
+    img: require('./imgs/fullbody.png'),
   },
   {
     id: '2',
     title: 'Mięśnie brzucha',
-    img: require('./imgs/belly.png')
+    img: require('./imgs/belly.png'),
   },
   {
     id: '3',
     title: 'Klatka piersiowa',
-    img: require('./imgs/chest.png')
+    img: require('./imgs/chest.png'),
   },
   /*
   {
@@ -78,7 +78,11 @@ class HomeScreen extends Component {
                   }}
                   style={styles.listItem}>
                   <Text style={{textAlign: 'center'}}>{item.title}</Text>
-                  <Image source = {item.img} resizeMode='contain' style={styles.listItem}/>
+                  <Image
+                    source={item.img}
+                    resizeMode="contain"
+                    style={styles.listItem}
+                  />
                 </TouchableOpacity>
               )}
             />

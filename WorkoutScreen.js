@@ -684,7 +684,6 @@ class WorkoutScreen extends Component {
         training = item;
       }
     });
-    console.log('Dlugosc: ' + training.exercises.length);
     return (
       <View style={styles.containerTraining}>
         {Toolbar(this.state.navigation, title)}

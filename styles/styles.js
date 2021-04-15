@@ -1,6 +1,9 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+  reps:{
+    fontSize: 28,
+  },
   scrollContainerExercises: {
     flex: 1,
     flexDirection: 'row',
@@ -18,6 +21,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     paddingHorizontal: 10,
+  },
+  startStopButton: {
+    height: 70,
+    width: '80%',
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  startStopRed: {
+    backgroundColor: 'red',
+  },
+  startStopBlue: {
+    backgroundColor: 'blue',
   },
   startButton: {
     backgroundColor: 'blue',

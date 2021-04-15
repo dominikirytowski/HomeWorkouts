@@ -6,23 +6,28 @@ import {View, TouchableOpacity, Text} from 'react-native';
 import ChangeExercise from './ChangeExercise';
 import Toolbar from './Toolbar';
 import styles from './styles/styles';
-import NextExercise from './NextExercise';
+import StopTraining from './StopTraining';
 
 function ExercisesScreen({navigation, route}) {
   const training = route.params.training;
   const length = route.params.length;
-  //console.log(exercises.exercises[1]);
   const index = route.params.index;
-  //console.log(index);
-  const start = 'START';
-  const stop = 'STOP';
+
   return (
     <View style={styles.containerTraining}>
       {Toolbar(navigation, training.title)}
       <View style={styles.trainingExercises}>
-        {ChangeExercise(navigation, training, index, length)}
+        {/*{console.log(training.exercises[0].time)}*/}
+        {length > index
+          ? ChangeExercise(
+              {navigation},
+              training.title,
+              training,
+              index,
+              length,
+            )
+          : StopTraining({navigation})}
       </View>
-      <View style={styles.trainingStart} />
     </View>
   );
 }

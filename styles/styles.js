@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  reps:{
+  reps: {
     fontSize: 28,
   },
   scrollContainerExercises: {
@@ -16,6 +16,26 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F8FA',
     flexBasis: '100%',
     height: 100,
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  itemGif: {
+    height: 80,
+    width: 100,
+  },
+  itemName: {
+    fontSize: 18,
+  },
+  imagePlaceHolder: {
+    flex: 1.5,
+    height: '80%',
+    marginHorizontal: '5%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  imagePlaceHolderText: {
+    fontSize: 18,
+    color: 'white',
   },
   timeText: {
     fontSize: 16,

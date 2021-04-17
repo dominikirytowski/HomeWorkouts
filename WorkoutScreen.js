@@ -8,10 +8,12 @@ import {
   SafeAreaView,
   ScrollView,
   FlatList,
+  Image,
 } from 'react-native';
 import styles from './styles/styles';
 import Toolbar from './Toolbar';
 import YoutubePlayer from 'react-native-youtube-iframe';
+import gifs from './Gifs';
 
 const TRAININGS = [
   {
@@ -89,7 +91,7 @@ const TRAININGS = [
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '1.111',
+        id: '1.11',
         title: 'Eleventh Item',
         time: 30,
         reps: 10,
@@ -142,6 +144,7 @@ const TRAININGS = [
         title: 'Jumping jacks',
         time: 30,
         reps: 0,
+        gif: gifs.stomach.jacks,
         video: 'iSSAk4XCsRA',
       },
       {
@@ -149,6 +152,7 @@ const TRAININGS = [
         title: 'Abdominal crunches',
         time: 0,
         reps: 16,
+        gif: gifs.stomach.crunches,
         video: '_YVhhXc2pSY',
       },
       {
@@ -156,6 +160,7 @@ const TRAININGS = [
         title: 'Russian twist',
         time: 0,
         reps: 20,
+        gif: gifs.stomach.russian,
         video: 'wkD8rjkodUI',
       },
       {
@@ -163,6 +168,7 @@ const TRAININGS = [
         title: 'Mountain climber',
         time: 0,
         reps: 16,
+        gif: gifs.stomach.climber,
         video: 'nmwgirgXLYM',
       },
       {
@@ -170,6 +176,7 @@ const TRAININGS = [
         title: 'Heel touch',
         time: 0,
         reps: 20,
+        gif: gifs.stomach.heel,
         video: 'fLajmFLpJ_w',
       },
       {
@@ -177,6 +184,7 @@ const TRAININGS = [
         title: 'Leg raises',
         time: 0,
         reps: 16,
+        gif: gifs.stomach.leg,
         video: 'JB2oyawG9KI',
       },
       {
@@ -184,6 +192,7 @@ const TRAININGS = [
         title: 'Plank',
         time: 30,
         reps: 0,
+        gif: gifs.stomach.plank,
         video: 'pSHjTRCQxIw',
       },
       {
@@ -191,6 +200,7 @@ const TRAININGS = [
         title: 'V-ups',
         time: 0,
         reps: 12,
+        gif: gifs.stomach.ups,
         video: 'iP2fjvG0g3w',
       },
       {
@@ -198,6 +208,7 @@ const TRAININGS = [
         title: 'Plank',
         time: 30,
         reps: 0,
+        gif: gifs.stomach.plank,
         video: 'pSHjTRCQxIw',
       },
       {
@@ -205,6 +216,7 @@ const TRAININGS = [
         title: 'Abdominal crunches',
         time: 0,
         reps: 12,
+        gif: gifs.stomach.crunches,
         video: 'Xyd_fa5zoEU',
       },
       {
@@ -212,6 +224,7 @@ const TRAININGS = [
         title: 'Leg raises',
         time: 0,
         reps: 10,
+        gif: gifs.stomach.leg,
         video: 'JB2oyawG9KI',
       },
       {
@@ -219,6 +232,7 @@ const TRAININGS = [
         title: 'Heel touch',
         time: 0,
         reps: 16,
+        gif: gifs.stomach.heel,
         video: 'fLajmFLpJ_w',
       },
       {
@@ -226,6 +240,7 @@ const TRAININGS = [
         title: 'Side leg raises',
         time: 0,
         reps: 10,
+        gif: gifs.stomach.side,
         video: 'jgh6sGwtTwk',
       },
       {
@@ -233,6 +248,7 @@ const TRAININGS = [
         title: 'Cobra stretch',
         time: 30,
         reps: 0,
+        gif: gifs.stomach.cobra,
         video: 'JDcdhTuycOI',
       },
       {
@@ -240,6 +256,7 @@ const TRAININGS = [
         title: 'Spine lumbar twist stretch left',
         time: 30,
         reps: 0,
+        gif: gifs.stomach.spine,
         video: 'BzYBkAvdCJY',
       },
       {
@@ -247,6 +264,7 @@ const TRAININGS = [
         title: 'Spine lumbar twist stretch right',
         time: 30,
         reps: 0,
+        gif: gifs.stomach.spine,
         video: 'BzYBkAvdCJY',
       },
     ],
@@ -704,7 +722,16 @@ class WorkoutScreen extends Component {
               data={training.exercises}
               renderItem={({item}) => (
                 <View style={styles.exerciseItem}>
-                  <Text>{item.title}</Text>
+                  <View style={styles.imagePlaceHolder}>
+                    <Image
+                      source={item.gif}
+                      resizeMode="stretch"
+                      style={styles.itemGif}
+                    />
+                  </View>
+                  <View style={{flex: 3}}>
+                    <Text style={styles.itemName}>{item.title}</Text>
+                  </View>
                   {/*<YoutubePlayer
                       height={300}
                       play={false}

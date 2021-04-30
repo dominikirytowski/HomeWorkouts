@@ -18,129 +18,10 @@ import gifs from './Gifs';
 const TRAININGS = [
   {
     id: '1',
-    title: 'Całe ciało',
-    exercises: [
-      {
-        id: '1.1',
-        title: 'First Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.2',
-        title: 'Second Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.3',
-        title: 'Third Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.4',
-        title: 'Fourth Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.5',
-        title: 'Fifth Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.6',
-        title: 'Sixth Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.7',
-        title: 'Seventh Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.8',
-        title: 'Eight Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.9',
-        title: 'Ninth Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.10',
-        title: 'Tenth Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.11',
-        title: 'Eleventh Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.12',
-        title: 'Twelfth Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.13',
-        title: 'Thirteenth Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.14',
-        title: 'Fourteenth Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.15',
-        title: 'Fifteenth Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-      {
-        id: '1.16',
-        title: 'Sixteenth Item',
-        time: 30,
-        reps: 10,
-        video: 'fLajmFLpJ_w',
-      },
-    ],
-    time: 20,
-  },
-  {
-    id: '2',
     title: 'Mięśnie brzucha',
     exercises: [
       {
-        id: '2.1',
+        id: '1.1',
         title: 'Jumping jacks',
         time: 30,
         reps: 0,
@@ -148,7 +29,7 @@ const TRAININGS = [
         video: 'iSSAk4XCsRA',
       },
       {
-        id: '2.2',
+        id: '1.2',
         title: 'Abdominal crunches',
         time: 0,
         reps: 16,
@@ -156,7 +37,7 @@ const TRAININGS = [
         video: '_YVhhXc2pSY',
       },
       {
-        id: '2.3',
+        id: '1.3',
         title: 'Russian twist',
         time: 0,
         reps: 20,
@@ -164,7 +45,7 @@ const TRAININGS = [
         video: 'wkD8rjkodUI',
       },
       {
-        id: '2.4',
+        id: '1.4',
         title: 'Mountain climber',
         time: 0,
         reps: 16,
@@ -172,7 +53,7 @@ const TRAININGS = [
         video: 'nmwgirgXLYM',
       },
       {
-        id: '2.5',
+        id: '1.5',
         title: 'Heel touch',
         time: 0,
         reps: 20,
@@ -180,7 +61,7 @@ const TRAININGS = [
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '2.6',
+        id: '1.6',
         title: 'Leg raises',
         time: 0,
         reps: 16,
@@ -188,7 +69,7 @@ const TRAININGS = [
         video: 'JB2oyawG9KI',
       },
       {
-        id: '2.7',
+        id: '1.7',
         title: 'Plank',
         time: 30,
         reps: 0,
@@ -196,7 +77,7 @@ const TRAININGS = [
         video: 'pSHjTRCQxIw',
       },
       {
-        id: '2.8',
+        id: '1.8',
         title: 'V-ups',
         time: 0,
         reps: 12,
@@ -204,7 +85,7 @@ const TRAININGS = [
         video: 'iP2fjvG0g3w',
       },
       {
-        id: '2.9',
+        id: '1.9',
         title: 'Plank',
         time: 30,
         reps: 0,
@@ -212,7 +93,7 @@ const TRAININGS = [
         video: 'pSHjTRCQxIw',
       },
       {
-        id: '2.10',
+        id: '1.10',
         title: 'Abdominal crunches',
         time: 0,
         reps: 12,
@@ -220,7 +101,7 @@ const TRAININGS = [
         video: 'Xyd_fa5zoEU',
       },
       {
-        id: '2.11',
+        id: '1.11',
         title: 'Leg raises',
         time: 0,
         reps: 10,
@@ -228,7 +109,7 @@ const TRAININGS = [
         video: 'JB2oyawG9KI',
       },
       {
-        id: '2.12',
+        id: '1.12',
         title: 'Heel touch',
         time: 0,
         reps: 16,
@@ -236,7 +117,7 @@ const TRAININGS = [
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '2.13',
+        id: '1.13',
         title: 'Side leg raises',
         time: 0,
         reps: 10,
@@ -244,7 +125,7 @@ const TRAININGS = [
         video: 'jgh6sGwtTwk',
       },
       {
-        id: '2.14',
+        id: '1.14',
         title: 'Cobra stretch',
         time: 30,
         reps: 0,
@@ -252,7 +133,7 @@ const TRAININGS = [
         video: 'JDcdhTuycOI',
       },
       {
-        id: '2.15',
+        id: '1.15',
         title: 'Spine lumbar twist stretch left',
         time: 30,
         reps: 0,
@@ -260,7 +141,7 @@ const TRAININGS = [
         video: 'BzYBkAvdCJY',
       },
       {
-        id: '2.16',
+        id: '1.16',
         title: 'Spine lumbar twist stretch right',
         time: 30,
         reps: 0,
@@ -271,102 +152,102 @@ const TRAININGS = [
     time: 16,
   },
   {
-    id: '3',
+    id: '2',
     title: 'Klatka piersiowa',
     exercises: [
       {
-        id: '3.1',
+        id: '2.1',
         title: 'Jumping jacks',
         time: 30,
         reps: 0,
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '3.2',
+        id: '2.2',
         title: 'Knee push-ups',
         time: 0,
         reps: 12,
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '3.3',
+        id: '2.3',
         title: 'push-ups',
         time: 0,
         reps: 12,
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '3.4',
+        id: '2.4',
         title: 'Wide arm push-ups',
         time: 0,
         reps: 16,
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '3.5',
+        id: '2.5',
         title: 'Hindu push-ups',
         time: 0,
         reps: 10,
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '3.6',
+        id: '2.6',
         title: 'Staggered push-ups',
         time: 0,
         reps: 12,
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '3.7',
+        id: '2.7',
         title: 'Push-up & rotation',
         time: 0,
         reps: 10,
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '3.8',
+        id: '2.8',
         title: 'Knee push-ups',
         time: 0,
         reps: 10,
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '3.9',
+        id: '2.9',
         title: 'Hindu push-ups',
         time: 0,
         reps: 10,
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '3.10',
+        id: '2.10',
         title: 'Decline push-ups',
         time: 0,
         reps: 12,
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '3.11',
+        id: '2.11',
         title: 'Staggered push-ups',
         time: 0,
         reps: 10,
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '3.12',
+        id: '2.12',
         title: 'Shoulder stretch',
         time: 30,
         reps: 0,
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '3.13',
+        id: '2.13',
         title: 'Cobra stretch',
         time: 30,
         reps: 0,
         video: 'fLajmFLpJ_w',
       },
       {
-        id: '3.14',
+        id: '2.14',
         title: 'Chest stretch',
         time: 30,
         reps: 0,
@@ -732,11 +613,6 @@ class WorkoutScreen extends Component {
                   <View style={{flex: 3}}>
                     <Text style={styles.itemName}>{item.title}</Text>
                   </View>
-                  {/*<YoutubePlayer
-                      height={300}
-                      play={false}
-                      videoId={item.video}
-                  />*/}
                 </View>
               )}
             />

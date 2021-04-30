@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   Text,
   Image,
+  ImageBackground,
 } from 'react-native';
 import Toolbar from './Toolbar';
 import styles from './styles/styles';
@@ -16,39 +17,30 @@ import styles from './styles/styles';
 const TRAININGS = [
   {
     id: '1',
-    title: 'Całe ciało',
-    img: require('./imgs/fullbody.png'),
+    title: 'Mięśnie brzucha',
+    img: require('./imgs/abs.jpg'),
   },
   {
     id: '2',
-    title: 'Mięśnie brzucha',
-    img: require('./imgs/belly.png'),
-  },
-  {
-    id: '3',
     title: 'Klatka piersiowa',
-    img: require('./imgs/chest.png'),
+    img: require('./imgs/chest.jpg'),
   },
-  /*
   {
     id: '4',
     title: 'Ramiona',
+    img: require('./imgs/biceps.jpg'),
   },
   {
     id: '5',
     title: 'Nogi',
+    img: require('./imgs/legs.jpg'),
   },
   {
     id: '6',
     title: 'Barki i plecy',
-  },*/
+    img: require('./imgs/back.jpg'),
+  },
 ];
-
-/*const[images, setImages] = useState([
-  require('./imgs/fullbody.png'),
-  require('./imgs/belly.png'),
-  require('./imgs/chest.png')
-]); */
 
 class HomeScreen extends Component {
   constructor(props) {
@@ -77,20 +69,17 @@ class HomeScreen extends Component {
                     });
                   }}
                   style={styles.listItem}>
-                  <Text style={{textAlign: 'center'}}>{item.title}</Text>
-                  <Image
-                    source={item.img}
-                    resizeMode="contain"
-                    style={styles.listItem}
-                  />
+                  <Image source={item.img} style={styles.listImage} />
+                  <Text style={styles.listTitle}>{item.title}</Text>
+                  <Text style={styles.listLastTime}>
+                    Ostatnio: kwi 30, 2021
+                  </Text>
+                  {/*Do zrobienia mechanizm sledzacy kiedy byl ostatni trening*/}
                 </TouchableOpacity>
               )}
             />
           </ScrollView>
         </SafeAreaView>
-        <View style={styles.footer}>
-          <Text>Footer</Text>
-        </View>
       </View>
     );
   }

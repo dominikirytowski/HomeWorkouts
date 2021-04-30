@@ -16,9 +16,9 @@ function ChangeExercise({navigation}, title, training, index, length) {
   }
   return (
     <View style={styles.trainingExercises}>
-      <View style={styles.trainingExercises}>
+      <View style={styles.exerciseClock}>
         {training.exercises[index].time === 0 ? (
-          <View>
+          <View style={styles.repsTime}>
             <Text style={styles.reps}>Reps: </Text>
             <Text style={styles.reps}>{training.exercises[index].reps}</Text>
           </View>
@@ -41,8 +41,15 @@ function ChangeExercise({navigation}, title, training, index, length) {
           />
         )}
       </View>
-      <View>
-        <Text>{training.exercises[index].title}</Text>
+      <View style={styles.exerciseGifView}>
+        <Image
+          source={training.exercises[index].gif}
+          resizeMode="stretch"
+          style={styles.exerciseGif}
+        />
+      </View>
+      <View style={styles.exerciseTitleView}>
+        <Text style={styles.exerciseTitle}>{training.exercises[index].title}</Text>
       </View>
       <View style={styles.trainingStart}>
         {training.exercises[index].time === 0 ? (

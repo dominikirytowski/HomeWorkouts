@@ -17,7 +17,6 @@ function ExercisesScreen({navigation, route}) {
     <View style={styles.containerTraining}>
       {Toolbar(navigation, training.title)}
       <View style={styles.trainingExercises}>
-        {/*{console.log(training.exercises[0].time)}*/}
         {length > index
           ? ChangeExercise(
               {navigation},

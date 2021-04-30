@@ -1,6 +1,38 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+  repsTime: {
+    flexDirection: 'row',
+  },
+  exerciseClock: {
+    flex: 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    backgroundColor: 'white',
+  },
+  exerciseGifView: {
+    flex: 4,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    backgroundColor: 'white',
+  },
+  exerciseTitleView: {
+    flex: 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    backgroundColor: 'white',
+  },
+  exerciseTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  exerciseGif: {
+    height: '70%',
+    resizeMode: 'contain',
+  },
   reps: {
     fontSize: 28,
   },
@@ -101,7 +133,7 @@ const styles = StyleSheet.create({
     flex: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'lightblue',
+    backgroundColor: 'lightgray',
     width: '100%',
   },
   safeArea: {
@@ -116,12 +148,37 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   listItem: {
-    flex: 5,
+    flex: 3,
     backgroundColor: '#F5F8FA',
-    width: 200,
-    height: 300,
+    width: 400,
+    height: 200,
     marginVertical: 5,
     justifyContent: 'center',
+    borderRadius: 20,
+  },
+  listImage: {
+    height: '100%',
+    width: '100%',
+    resizeMode: 'cover',
+    borderRadius: 20,
+  },
+  listTitle: {
+    textTransform: 'uppercase',
+    position: 'absolute',
+    top: 30,
+    left: 20,
+    textAlign: 'center',
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 32,
+  },
+  listLastTime: {
+    position: 'absolute',
+    top: 65,
+    left: 20,
+    textAlign: 'center',
+    color: 'yellow',
+    fontSize: 18,
   },
   footer: {
     flex: 1,

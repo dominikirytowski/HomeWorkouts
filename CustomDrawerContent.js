@@ -58,6 +58,15 @@ class CustomDrawerContent extends Component {
             <Text>Home</Text>
           </TouchableOpacity>
         </View>
+        <View style={styles.drawerSection}>
+          <TouchableOpacity
+            style={styles.drawerOption}
+            onPress={() => {
+              navigation.navigate('ProductComponent', {title: "Meals"});
+            }}>
+            <Text>Meals</Text>
+          </TouchableOpacity>
+        </View>
         {TRAININGS.map(n => (
           <TouchableOpacity
             style={styles.drawerOption}

@@ -187,6 +187,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  input: {
+    height: 50,
+    width: 150,
+  },
+  containerMeals: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'lightgray',
+    width: '100%',
+    height: '80%',
+  }
 });
 
 export default styles;

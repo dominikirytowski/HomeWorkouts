@@ -16,6 +16,7 @@ import CustomDrawerContent from './CustomDrawerContent';
 import HomeScreen from './HomeScreen';
 import WorkoutScreen from './WorkoutScreen';
 import ExercisesScreen from './ExercisesScreen';
+import ProductComponent from './ProductComponent';
 
 const TRAININGS = [
   {
@@ -576,6 +577,7 @@ class App extends Component {
             <Drawer.Screen name={n.title} component={WorkoutScreen} />
           ))}
           <Drawer.Screen name="Exercises" component={ExercisesScreen} />
+          <Drawer.Screen name="ProductComponent" component={ProductComponent}/>
         </Drawer.Navigator>
       </NavigationContainer>
     );

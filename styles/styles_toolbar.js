@@ -25,11 +25,16 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
     borderColor: 'black',
-    borderBottomWidth: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingLeft: 15,
+
   },
+  toolbarMeals:{
+    backgroundColor: 'white',
+    borderColor: 'black',
+    flexDirection: 'row',
+    alignItems: 'center',
+  }
 });
 
 export default styles;

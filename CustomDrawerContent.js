@@ -3,34 +3,7 @@ import React, {Component} from 'react';
 import {View, TouchableOpacity, Text, Image} from 'react-native';
 import {DrawerContentScrollView} from '@react-navigation/drawer';
 import styles from './styles/styles_drawer';
-
-const TRAININGS = [
-  {
-    id: '1',
-    title: 'Mięśnie brzucha',
-    img: require('./imgs/abs.jpg'),
-  },
-  {
-    id: '2',
-    title: 'Klatka piersiowa',
-    img: require('./imgs/chest.jpg'),
-  },
-  {
-    id: '4',
-    title: 'Ramiona',
-    img: require('./imgs/biceps.jpg'),
-  },
-  {
-    id: '5',
-    title: 'Nogi',
-    img: require('./imgs/legs.jpg'),
-  },
-  {
-    id: '6',
-    title: 'Barki i plecy',
-    img: require('./imgs/back.jpg'),
-  },
-];
+import TRAININGS from "./trainingsGeneral";
 
 class CustomDrawerContent extends Component {
   constructor(props) {

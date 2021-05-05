@@ -30,10 +30,12 @@ const styles = StyleSheet.create({
 
   },
   toolbarMeals:{
+    flex: 1,
     backgroundColor: 'white',
     borderColor: 'black',
-    flexDirection: 'row',
     alignItems: 'center',
+    marginBottom: 20,
+    width: '100%'
   }
 });
 

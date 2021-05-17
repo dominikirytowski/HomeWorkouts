@@ -191,21 +191,6 @@ const styles = StyleSheet.create({
     height: 50,
     width: 150,
   },
-  containerMeals: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  insideMeals: {
-    flex: 3,
-    // backgroundColor: 'yellow',
-  },
-  containerMealsBtn: {
-    flex: 3,
-    // backgroundColor: 'red',
-    width: '100%',
-  },
 
 });
 

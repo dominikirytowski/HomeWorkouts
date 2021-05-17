@@ -19,6 +19,7 @@
     "react-native-countdown-component": "^2.7.1",
     "react-native-draggable-flatlist": "^2.5.4",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-keyboard-spacer": "^0.4.1",
     "react-native-material-design": "^0.3.7",
     "react-native-paper": "^4.8.1",
     "react-native-reanimated": "^1.9.0",

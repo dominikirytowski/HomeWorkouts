@@ -29,14 +29,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
 
   },
-  toolbarMeals:{
-    flex: 1,
-    backgroundColor: 'white',
-    borderColor: 'black',
-    alignItems: 'center',
-    marginBottom: 20,
-    width: '100%'
-  }
+
 });
 
 export default styles;

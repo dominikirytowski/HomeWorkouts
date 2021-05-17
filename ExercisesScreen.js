@@ -25,7 +25,7 @@ function ExercisesScreen({navigation, route}) {
               index,
               length,
             )
-          : StopTraining({navigation})}
+          : StopTraining({navigation},training.id )}
       </View>
     </View>
   );

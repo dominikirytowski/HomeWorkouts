@@ -16,8 +16,7 @@ import CustomDrawerContent from './CustomDrawerContent';
 import HomeScreen from './HomeScreen';
 import WorkoutScreen from './WorkoutScreen';
 import ExercisesScreen from './ExercisesScreen';
-import TRAININGS  from "./trainingsGeneral";
-import EXERCISES from "./exercisesDetails";
+import TRAININGS from './trainingsGeneral';
 
 const Drawer = createDrawerNavigator();
 class App extends Component {

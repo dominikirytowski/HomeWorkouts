@@ -14,7 +14,7 @@ import styles from './styles/styles';
 import Toolbar from './Toolbar';
 import YoutubePlayer from 'react-native-youtube-iframe';
 import gifs from './Gifs';
-import TRAININGSD from "./trainingsDetails";
+import TRAININGSD from './trainingsDetails';
 
 class WorkoutScreen extends Component {
   constructor(props) {

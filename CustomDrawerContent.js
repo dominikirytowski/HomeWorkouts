@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {View, TouchableOpacity, Text, Image} from 'react-native';
 import {DrawerContentScrollView} from '@react-navigation/drawer';
 import styles from './styles/styles_drawer';
-import TRAININGS from "./trainingsGeneral";
+import TRAININGS from './trainingsGeneral';
 
 class CustomDrawerContent extends Component {
   constructor(props) {

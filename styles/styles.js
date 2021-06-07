@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   },
   startStopButton: {
     height: 70,
-    width: '80%',
+    width: '60%',
     borderRadius: 50,
     justifyContent: 'center',
     alignItems: 'center',
@@ -115,8 +115,9 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     backgroundColor: 'lightgray',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
+    flexDirection: 'row',
   },
   trainingImg: {
     width: 350,
@@ -186,6 +187,23 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  prevNextButtons: {
+    flexDirection: 'row',
+  },
+  prevNextText: {
+    color: 'black',
+  },
+  fastForwardImage: {
+    height: 20,
+    width: 20,
+    marginLeft: 3,
+  },
+  goBackImage: {
+    height: 20,
+    width: 20,
+    marginRight: 3,
+    transform: [{rotate: '180deg'}],
   },
 });
 

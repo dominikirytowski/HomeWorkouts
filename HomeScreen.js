@@ -50,7 +50,7 @@ class HomeScreen extends Component {
     let temp = this.state.dates;
     for (let i = 0; i < temp.length; i++) {
       let item = temp[i];
-      if (item.id == id) {
+      if (item.id === id) {
         return <Text>{item.data}</Text>;
       }
     }

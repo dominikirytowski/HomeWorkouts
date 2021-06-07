@@ -1,18 +1,22 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {DrawerActions} from '@react-navigation/native';
 
-function StopTraining({navigation}, id) {
+function StopTraining({navigation}, training) {
   let today = new Date();
   let dd = String(today.getDate()).padStart(2, '0');
   let mm = String(today.getMonth() + 1).padStart(2, '0');
-  today = dd + '/' + mm;
+  let yyyy = String(today.getFullYear()).padStart(2, '0');
+  today = dd + '/' + mm + '/' + yyyy;
 
-  console.log(today + ' ASDASFSAFA ' + id);
+  console.log(today + ' ASDASFSAFA ' + training.id);
 
-  let jsonValue = JSON.stringify({id: id, data: today});
-  AsyncStorage.setItem('exc' + id, jsonValue);
+  let jsonValue = JSON.stringify({id: training.id, data: today});
+  AsyncStorage.setItem('exc' + training.id, jsonValue);
 
   navigation.dispatch(DrawerActions.closeDrawer());
-  navigation.navigate('Home');
+  navigation.navigate('Summary', {
+    title: 'Summary',
+    training: training,
+  });
 }
 export default StopTraining;

@@ -16,6 +16,7 @@ import CustomDrawerContent from './CustomDrawerContent';
 import HomeScreen from './HomeScreen';
 import WorkoutScreen from './WorkoutScreen';
 import ExercisesScreen from './ExercisesScreen';
+import SummaryScreen from './SummaryScreen';
 import TRAININGS from './trainingsGeneral';
 
 const Drawer = createDrawerNavigator();
@@ -31,6 +32,7 @@ class App extends Component {
             <Drawer.Screen name={n.title} component={WorkoutScreen} />
           ))}
           <Drawer.Screen name="Exercises" component={ExercisesScreen} />
+          <Drawer.Screen name="Summary" component={SummaryScreen} />
         </Drawer.Navigator>
       </NavigationContainer>
     );

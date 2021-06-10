@@ -18,10 +18,15 @@ import WorkoutScreen from './WorkoutScreen';
 import ExercisesScreen from './ExercisesScreen';
 import SummaryScreen from './SummaryScreen';
 import TRAININGS from './trainingsGeneral';
+import NetInfo from '@react-native-community/netinfo';
 
 const Drawer = createDrawerNavigator();
 class App extends Component {
   render() {
+    NetInfo.fetch().then(networkState => {
+      console.log('Connection type - ', networkState.type);
+      console.log('Is connected? - ', networkState.isConnected);
+    });
     return (
       <NavigationContainer>
         <Drawer.Navigator

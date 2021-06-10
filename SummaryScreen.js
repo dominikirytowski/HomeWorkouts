@@ -23,7 +23,7 @@ class SummaryScreen extends Component {
         <SafeAreaView style={styles.safeArea}>
           <Text>You are in summary! Training finished well done!</Text>
         </SafeAreaView>
-        <View style={styles.trainingStart}></View>
+        <View style={styles.trainingStart} />
       </View>
     );
   }

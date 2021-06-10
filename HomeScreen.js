@@ -14,21 +14,27 @@ import {
 import Toolbar from './Toolbar';
 import styles from './styles/styles';
 import TRAININGS from './trainingsGeneral';
+import {getTrainings} from './Networking';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {StackActions} from '@react-navigation/native';
 
 class HomeScreen extends Component {
   componentDidMount = () => {
     this._retrieveData();
+    this.getTrainingsFromApi().then(r => this.setState({trainings: r}));
   };
 
   constructor(props) {
     super(props);
     this.state = {
       navigation: this.props.navigation,
+      trainings: [],
       dates: [],
     };
   }
+  getTrainingsFromApi = async () => {
+    return await getTrainings();
+  };
 
   _retrieveData = async () => {
     try {
@@ -67,7 +73,7 @@ class HomeScreen extends Component {
             contentContainerStyle={styles.scrollContainer}>
             <FlatList
               keyExtractor={item => item.id}
-              data={TRAININGS}
+              data={this.state.trainings}
               renderItem={({item}) => (
                 <TouchableOpacity
                   onPress={() => {
@@ -77,7 +83,15 @@ class HomeScreen extends Component {
                     });
                   }}
                   style={styles.listItem}>
-                  <Image source={item.img} style={styles.listImage} />
+                  {console.log(item.image)}
+                  <Image
+                    source={{
+                      uri:
+                        'https://cdn3.omidoo.com/sites/default/files/imagecache/2560x2560/images/headline/201808/legsstrongmuscular.jpg',
+                    }}
+                    style={styles.listImage}
+                    resizeMode={'cover'}
+                  />
                   <Text style={styles.listTitle}>{item.title}</Text>
                   <Text style={styles.listLastTime}>
                     {this.putLastData(item.id)}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">192.168.0.10</domain>
+        <domain includeSubdomains="true">127.0.0.1</domain>
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">reqbin.com</domain>
+        <domain includeSubdomains="true">stalowezdrowie.pl</domain>
+        <domain includeSubdomains="true">onnitacademy.imgix.net</domain>
+        <domain includeSubdomains="true">hips.hearstapps.com</domain>
+        <domain includeSubdomains="true">cdn3.omidoo.com</domain>
+    </domain-config>
+</network-security-config>

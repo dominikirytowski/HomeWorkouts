@@ -1,4 +1,4 @@
-function NextQuestion({navigation}, title, training, index, length) {
+function NextExercise({navigation}, title, training, index, length) {
   if (index - 1 < length) {
     console.log(index);
     navigation.navigate('Exercises', {
@@ -8,4 +8,4 @@ function NextQuestion({navigation}, title, training, index, length) {
     });
   }
 }
-export default NextQuestion;
+export default NextExercise;

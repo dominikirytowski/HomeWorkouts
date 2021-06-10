@@ -1,4 +1,4 @@
-function PrevQuestion({navigation}, title, training, index, length) {
+function PrevExercise({navigation}, title, training, index, length) {
   if (index > 0) {
     navigation.navigate('Exercises', {
       training: training,
@@ -7,4 +7,4 @@ function PrevQuestion({navigation}, title, training, index, length) {
     });
   }
 }
-export default PrevQuestion;
+export default PrevExercise;

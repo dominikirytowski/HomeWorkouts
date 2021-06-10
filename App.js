@@ -19,7 +19,7 @@ import ExercisesScreen from './ExercisesScreen';
 import SummaryScreen from './SummaryScreen';
 import TRAININGS from './trainingsGeneral';
 import NetInfo from '@react-native-community/netinfo';
-import {getTrainings} from './Networking';
+import {getTrainings} from './NetworkingImpl';
 
 const Drawer = createDrawerNavigator();
 class App extends Component {
@@ -28,12 +28,8 @@ class App extends Component {
       console.log('Connection type - ', networkState.type);
       console.log('Is connected? - ', networkState.isConnected);
     });
-    this.getTrainingsFromApi().then(r => this.setState({trainings: r}));
+    getTrainings().then(r => this.setState({trainings: r}));
   }
-
-  getTrainingsFromApi = async () => {
-    return await getTrainings();
-  };
 
   constructor(props) {
     super(props);

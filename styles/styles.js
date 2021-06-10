@@ -150,7 +150,8 @@ const styles = StyleSheet.create({
   },
   listItem: {
     flex: 3,
-    backgroundColor: '#F5F8FA',
+    //backgroundColor: '#F5F8FA',
+    backgroundColor: 'black',
     width: 400,
     height: 200,
     marginVertical: 5,

@@ -14,14 +14,22 @@ import {
 import Toolbar from './Toolbar';
 import styles from './styles/styles';
 import TRAININGS from './trainingsGeneral';
-import {getTrainings, getExercises} from './Networking';
+import ADMIN from './UserAdmin';
+import {
+  getTrainings,
+  getExercises,
+  getPersonLastTraining,
+} from './NetworkingImpl';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {StackActions} from '@react-navigation/native';
 
 class HomeScreen extends Component {
   componentDidMount = () => {
-    this.getTrainingsFromApi().then(r => this.setState({trainings: r}));
-    this._retrieveData();
+    getTrainings().then(r => this.setState({trainings: r}));
+    //this._retrieveData();
+  };
+  componentWillMount = () => {
+    getPersonLastTraining(ADMIN.id).then(r => this.setState({last: r}));
   };
 
   constructor(props) {
@@ -29,15 +37,9 @@ class HomeScreen extends Component {
     this.state = {
       navigation: this.props.navigation,
       trainings: [],
-      dates: [],
+      last: [],
     };
   }
-  getTrainingsFromApi = async () => {
-    return await getTrainings();
-  };
-  getExercisesFromApi = async id => {
-    return await getExercises(id);
-  };
 
   _retrieveData = async () => {
     try {
@@ -55,18 +57,8 @@ class HomeScreen extends Component {
     }
   };
 
-  putLastData(id) {
-    let temp = this.state.dates;
-    for (let i = 0; i < temp.length; i++) {
-      let item = temp[i];
-      if (item.id === id) {
-        return <Text>{item.data}</Text>;
-      }
-    }
-    return <Text>No info</Text>;
-  }
-
   render() {
+    console.log(this.state.last);
     return (
       <View style={styles.container}>
         {Toolbar(this.state.navigation, 'Home')}
@@ -80,7 +72,7 @@ class HomeScreen extends Component {
               renderItem={({item}) => (
                 <TouchableOpacity
                   onPress={() => {
-                    this.getExercisesFromApi(parseInt(item.id)).then(r =>
+                    getExercises(parseInt(item.id)).then(r =>
                       this.state.navigation.navigate(r.title, {
                         title: r.title,
                         training: r,
@@ -98,7 +90,15 @@ class HomeScreen extends Component {
                   />
                   <Text style={styles.listTitle}>{item.title}</Text>
                   <Text style={styles.listLastTime}>
-                    {this.putLastData(item.id)}
+                    {this.state.last.map(n => {
+                      if (n.idTraining === item.id) {
+                        return (
+                          <Text>{n.day + '/' + n.month + '/' + n.year}</Text>
+                        );
+                      } else {
+                        return <Text>No info</Text>;
+                      }
+                    })}
                   </Text>
                 </TouchableOpacity>
               )}

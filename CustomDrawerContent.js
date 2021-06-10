@@ -4,16 +4,12 @@ import {View, TouchableOpacity, Text, Image} from 'react-native';
 import {DrawerContentScrollView} from '@react-navigation/drawer';
 import styles from './styles/styles_drawer';
 import TRAININGS from './trainingsGeneral';
-import {getTrainings} from './Networking';
+import {getTrainings} from './NetworkingImpl';
 
 class CustomDrawerContent extends Component {
   componentDidMount() {
-    this.getTrainingsFromApi().then(r => this.setState({trainings: r}));
+    getTrainings().then(r => this.setState({trainings: r}));
   }
-
-  getTrainingsFromApi = async () => {
-    return await getTrainings();
-  };
 
   constructor(props) {
     super(props);

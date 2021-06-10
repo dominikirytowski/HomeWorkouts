@@ -3,8 +3,8 @@ import React, {useState, useEffect} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import CountDown from 'react-native-countdown-component';
 import styles from './styles/styles';
-import NextQuestion from './NextQuestion';
-import PrevQuestion from './PrevQuestion';
+import NextExercise from './NextExercise';
+import PrevExercise from './PrevExercise';
 
 function ChangeExercise({navigation}, title, training, index, length) {
   const [key, setKey] = useState(0);
@@ -32,7 +32,7 @@ function ChangeExercise({navigation}, title, training, index, length) {
               setKey(prevKey => prevKey + 1);
               setRun(false);
               setStart('START');
-              NextQuestion({navigation}, title, training, index, length);
+              NextExercise({navigation}, title, training, index, length);
             }}
             digitStyle={{backgroundColor: '#FFF'}}
             digitTxtStyle={{color: '#000'}}
@@ -58,7 +58,11 @@ function ChangeExercise({navigation}, title, training, index, length) {
         <TouchableOpacity
           style={styles.prevNextButtons}
           onPress={() => {
-            PrevQuestion({navigation}, title, training, index, length);
+            if (run) {
+              setRun(false);
+              setStart('START');
+            }
+            PrevExercise({navigation}, title, training, index, length);
           }}>
           <Image
             style={styles.goBackImage}
@@ -74,7 +78,7 @@ function ChangeExercise({navigation}, title, training, index, length) {
                 setRun(false);
                 setStart('START');
               }
-              NextQuestion({navigation}, title, training, index, length);
+              NextExercise({navigation}, title, training, index, length);
             }}>
             <Text style={styles.start}>NEXT EXERCISE</Text>
           </TouchableOpacity>
@@ -99,7 +103,11 @@ function ChangeExercise({navigation}, title, training, index, length) {
         <TouchableOpacity
           style={styles.prevNextButtons}
           onPress={() => {
-            NextQuestion({navigation}, title, training, index, length);
+            if (run) {
+              setRun(false);
+              setStart('START');
+            }
+            NextExercise({navigation}, title, training, index, length);
           }}>
           <Text style={styles.prevNextText}>Skip</Text>
           <Image

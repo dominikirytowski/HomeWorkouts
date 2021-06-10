@@ -27,23 +27,16 @@ class WorkoutScreen extends Component {
   render() {
     const navigation = this.state.navigation;
     const title = this.state.route.params.title;
-    const exercisesId = this.state.route.params.exercisesId;
-    let training = {};
-    TRAININGSD.forEach(item => {
-      if (item.id === exercisesId) {
-        training = item;
-      }
-    });
+    const training = this.state.route.params.training;
+
     return (
       <View style={styles.containerTraining}>
         {Toolbar(this.state.navigation, title)}
         <View style={styles.trainingTime}>
           <Text style={styles.timeText}>|</Text>
-          <Text style={styles.timeText}>{training.time} min</Text>
+          <Text style={styles.timeText}>16 min</Text>
           <Text style={styles.timeText}>.</Text>
-          <Text style={styles.timeText}>
-            {training.exercises.length} exercises
-          </Text>
+          <Text style={styles.timeText}>{training.exercises.length} exercises</Text>
         </View>
         <SafeAreaView style={styles.trainingExercises}>
           <ScrollView
@@ -56,7 +49,7 @@ class WorkoutScreen extends Component {
                 <View style={styles.exerciseItem}>
                   <View style={styles.imagePlaceHolder}>
                     <Image
-                      source={item.gif}
+                      source={{uri: item.gif}}
                       resizeMode="stretch"
                       style={styles.itemGif}
                     />

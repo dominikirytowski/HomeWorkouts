@@ -14,14 +14,14 @@ import {
 import Toolbar from './Toolbar';
 import styles from './styles/styles';
 import TRAININGS from './trainingsGeneral';
-import {getTrainings} from './Networking';
+import {getTrainings, getExercises} from './Networking';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {StackActions} from '@react-navigation/native';
 
 class HomeScreen extends Component {
   componentDidMount = () => {
-    this._retrieveData();
     this.getTrainingsFromApi().then(r => this.setState({trainings: r}));
+    this._retrieveData();
   };
 
   constructor(props) {
@@ -35,11 +35,14 @@ class HomeScreen extends Component {
   getTrainingsFromApi = async () => {
     return await getTrainings();
   };
+  getExercisesFromApi = async id => {
+    return await getExercises(id);
+  };
 
   _retrieveData = async () => {
     try {
       let temp = this.state.dates;
-      for (let i = 1; i <= TRAININGS.length; i++) {
+      for (let i = 1; i <= TRAININGS; i++) {
         const value = await AsyncStorage.getItem('exc' + i);
         if (value !== null) {
           let json = JSON.parse(value);
@@ -77,17 +80,18 @@ class HomeScreen extends Component {
               renderItem={({item}) => (
                 <TouchableOpacity
                   onPress={() => {
-                    this.state.navigation.navigate(item.title, {
-                      title: item.title,
-                      exercisesId: item.id,
-                    });
+                    this.getExercisesFromApi(parseInt(item.id)).then(r =>
+                      this.state.navigation.navigate(r.title, {
+                        title: r.title,
+                        training: r,
+                      }),
+                    );
                   }}
                   style={styles.listItem}>
                   {console.log(item.image)}
                   <Image
                     source={{
-                      uri:
-                        'https://cdn3.omidoo.com/sites/default/files/imagecache/2560x2560/images/headline/201808/legsstrongmuscular.jpg',
+                      uri: item.image,
                     }}
                     style={styles.listImage}
                     resizeMode={'cover'}

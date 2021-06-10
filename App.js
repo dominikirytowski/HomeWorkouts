@@ -19,21 +19,37 @@ import ExercisesScreen from './ExercisesScreen';
 import SummaryScreen from './SummaryScreen';
 import TRAININGS from './trainingsGeneral';
 import NetInfo from '@react-native-community/netinfo';
+import {getTrainings} from './Networking';
 
 const Drawer = createDrawerNavigator();
 class App extends Component {
-  render() {
+  componentDidMount(): * {
     NetInfo.fetch().then(networkState => {
       console.log('Connection type - ', networkState.type);
       console.log('Is connected? - ', networkState.isConnected);
     });
+    this.getTrainingsFromApi().then(r => this.setState({trainings: r}));
+  }
+
+  getTrainingsFromApi = async () => {
+    return await getTrainings();
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      trainings: [],
+    };
+  }
+
+  render() {
     return (
       <NavigationContainer>
         <Drawer.Navigator
           initialRouteName="Home"
           drawerContent={props => <CustomDrawerContent {...props} />}>
           <Drawer.Screen name="Home" component={HomeScreen} />
-          {TRAININGS.map(n => (
+          {this.state.trainings.map(n => (
             <Drawer.Screen name={n.title} component={WorkoutScreen} />
           ))}
           <Drawer.Screen name="Exercises" component={ExercisesScreen} />

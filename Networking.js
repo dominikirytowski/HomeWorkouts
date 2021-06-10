@@ -4,7 +4,6 @@ export const getTrainings = async () => {
   return await fetch(baseUrl + 'trainings')
     .then(response => response.json())
     .then(responseJson => {
-      console.log(responseJson);
       return responseJson;
     })
     .catch(error => {
@@ -13,15 +12,14 @@ export const getTrainings = async () => {
 };
 
 export const getExercises = async id => {
-  try {
-    await fetch(baseUrl + 'exercises?id=' + id)
-      .then(response => response.json())
-      .then(responseJson => {
-        return responseJson;
-      });
-  } catch (error) {
-    console.error(error);
-  }
+  return await fetch(baseUrl + 'exercises?id=' + id)
+    .then(response => response.json())
+    .then(responseJson => {
+      return responseJson;
+    })
+    .catch(error => {
+      console.error(error);
+    });
 };
 
 export const getBmi = async (height, weight) => {

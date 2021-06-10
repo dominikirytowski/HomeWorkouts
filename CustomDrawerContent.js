@@ -4,15 +4,24 @@ import {View, TouchableOpacity, Text, Image} from 'react-native';
 import {DrawerContentScrollView} from '@react-navigation/drawer';
 import styles from './styles/styles_drawer';
 import TRAININGS from './trainingsGeneral';
+import {getTrainings} from './Networking';
 
 class CustomDrawerContent extends Component {
+  componentDidMount() {
+    this.getTrainingsFromApi().then(r => this.setState({trainings: r}));
+  }
+
+  getTrainingsFromApi = async () => {
+    return await getTrainings();
+  };
+
   constructor(props) {
     super(props);
     this.state = {
       navigation: this.props.navigation,
+      trainings: [],
     };
   }
-
   render() {
     const navigation = this.state.navigation;
     return (
@@ -31,7 +40,7 @@ class CustomDrawerContent extends Component {
             <Text>Home</Text>
           </TouchableOpacity>
         </View>
-        {TRAININGS.map(n => (
+        {this.state.trainings.map(n => (
           <TouchableOpacity
             style={styles.drawerOption}
             onPress={() => {

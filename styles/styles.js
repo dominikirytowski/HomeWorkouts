@@ -205,6 +205,22 @@ const styles = StyleSheet.create({
     marginRight: 3,
     transform: [{rotate: '180deg'}],
   },
+  buttonAnim: {
+    padding: 8,
+  },
+  buttonTextAnim: {
+    fontSize: 17,
+    color: '#007AFF',
+  },
+  subView: {
+    position: 'absolute',
+    top: -300,
+    left: 0,
+    right: 0,
+    backgroundColor: 'red',
+    height: 300,
+    width: '100%',
+  },
 });
 
 export default styles;

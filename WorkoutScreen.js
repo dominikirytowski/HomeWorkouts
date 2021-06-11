@@ -34,8 +34,6 @@ class WorkoutScreen extends Component {
         {Toolbar(this.state.navigation, title)}
         <View style={styles.trainingTime}>
           <Text style={styles.timeText}>|</Text>
-          <Text style={styles.timeText}>16 min</Text>
-          <Text style={styles.timeText}>.</Text>
           <Text style={styles.timeText}>
             {training.exercises.length} exercises
           </Text>

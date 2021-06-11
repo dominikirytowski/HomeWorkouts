@@ -1,10 +1,17 @@
 import 'react-native-gesture-handler';
 import React, {useState, useEffect} from 'react';
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  TouchableHighlight,
+} from 'react-native';
 import CountDown from 'react-native-countdown-component';
 import styles from './styles/styles';
 import NextExercise from './NextExercise';
 import PrevExercise from './PrevExercise';
+import Animated from 'react-native-reanimated';
 
 function ChangeExercise({navigation}, title, training, index, length) {
   const [key, setKey] = useState(0);
@@ -15,6 +22,7 @@ function ChangeExercise({navigation}, title, training, index, length) {
   if (training.exercises[index].time !== 0) {
     time = training.exercises[index].time;
   }
+
   return (
     <View style={styles.trainingExercises}>
       <View style={styles.exerciseClock}>

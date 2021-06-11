@@ -30,8 +30,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   exerciseGif: {
-    height: '70%',
-    resizeMode: 'contain',
+    height: '60%',
+    width: '60%',
   },
   reps: {
     fontSize: 28,

@@ -43,12 +43,14 @@ function ChangeExercise({navigation}, title, training, index, length) {
         )}
       </View>
       <View style={styles.exerciseGifView}>
-        {console.log(training.exercises[index].gif)}
         <Image
-          source={{uri: training.exercises[index].gif}}
-          resizeMode="stretch"
+          source={{
+            uri: training.exercises[index].gif,
+          }}
+          resizeMode="contain"
           style={styles.exerciseGif}
         />
+        {console.log(training.exercises[index].gif)}
       </View>
       <View style={styles.exerciseTitleView}>
         <Text style={styles.exerciseTitle}>

@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8080/api/';
+const baseUrl = 'http://192.168.0.27:8080/api/';
 
 export const getTrainingsFromApi = async () => {
   return await fetch(baseUrl + 'trainings')

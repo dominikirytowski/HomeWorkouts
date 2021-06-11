@@ -36,7 +36,9 @@ class WorkoutScreen extends Component {
           <Text style={styles.timeText}>|</Text>
           <Text style={styles.timeText}>16 min</Text>
           <Text style={styles.timeText}>.</Text>
-          <Text style={styles.timeText}>{training.exercises.length} exercises</Text>
+          <Text style={styles.timeText}>
+            {training.exercises.length} exercises
+          </Text>
         </View>
         <SafeAreaView style={styles.trainingExercises}>
           <ScrollView

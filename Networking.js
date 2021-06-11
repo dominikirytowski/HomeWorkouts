@@ -48,9 +48,8 @@ export const savePersonTrainingFromApi = async (idPerson, idTraining) => {
       },
     },
   )
-    .then(response => response.json())
-    .then(responseJson => {
-      return responseJson;
+    .then(response => {
+      return response.status;
     })
     .catch(error => {
       console.error(error);

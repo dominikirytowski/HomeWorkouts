@@ -26,10 +26,8 @@ import {StackActions} from '@react-navigation/native';
 class HomeScreen extends Component {
   componentDidMount = () => {
     getTrainings().then(r => this.setState({trainings: r}));
-    //this._retrieveData();
-  };
-  componentWillMount = () => {
     getPersonLastTraining(ADMIN.id).then(r => this.setState({last: r}));
+    //this._retrieveData();
   };
 
   constructor(props) {
@@ -58,7 +56,6 @@ class HomeScreen extends Component {
   };
 
   render() {
-    console.log(this.state.last);
     return (
       <View style={styles.container}>
         {Toolbar(this.state.navigation, 'Home')}
@@ -95,8 +92,6 @@ class HomeScreen extends Component {
                         return (
                           <Text>{n.day + '/' + n.month + '/' + n.year}</Text>
                         );
-                      } else {
-                        return <Text>No info</Text>;
                       }
                     })}
                   </Text>

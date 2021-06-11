@@ -3,8 +3,12 @@ import React, {Component} from 'react';
 import {View, TouchableOpacity, Text, Image} from 'react-native';
 import {DrawerContentScrollView} from '@react-navigation/drawer';
 import styles from './styles/styles_drawer';
-import TRAININGS from './trainingsGeneral';
-import {getTrainings} from './NetworkingImpl';
+import {
+  getExercises,
+  getPersonLastTraining,
+  getTrainings,
+} from './NetworkingImpl';
+import ADMIN from './UserAdmin';
 
 class CustomDrawerContent extends Component {
   componentDidMount() {
@@ -31,7 +35,9 @@ class CustomDrawerContent extends Component {
           <TouchableOpacity
             style={styles.drawerOption}
             onPress={() => {
-              navigation.navigate('Home');
+              navigation.navigate('Home', {
+                last: getPersonLastTraining(ADMIN.id),
+              });
             }}>
             <Text>Home</Text>
           </TouchableOpacity>
@@ -40,7 +46,12 @@ class CustomDrawerContent extends Component {
           <TouchableOpacity
             style={styles.drawerOption}
             onPress={() => {
-              navigation.navigate(n.title, {title: n.title, exercisesId: n.id});
+              getExercises(parseInt(n.id)).then(r =>
+                this.state.navigation.navigate(r.title, {
+                  title: r.title,
+                  training: r,
+                }),
+              );
             }}>
             <Text>{n.title}</Text>
           </TouchableOpacity>

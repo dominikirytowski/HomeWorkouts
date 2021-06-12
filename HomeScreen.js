@@ -1,5 +1,4 @@
 import 'react-native-gesture-handler';
-//import 'react-native-reanimated';
 import React, {Component} from 'react';
 import {
   View,
@@ -9,11 +8,9 @@ import {
   TouchableOpacity,
   Text,
   Image,
-  ImageBackground,
 } from 'react-native';
 import Toolbar from './Toolbar';
 import styles from './styles/styles';
-import TRAININGS from './trainingsGeneral';
 import ADMIN from './UserAdmin';
 import {
   getTrainings,
@@ -21,13 +18,11 @@ import {
   getPersonLastTraining,
 } from './NetworkingImpl';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {StackActions} from '@react-navigation/native';
 
 class HomeScreen extends Component {
   componentDidMount = () => {
     getTrainings().then(r => this.setState({trainings: r}));
     getPersonLastTraining(ADMIN.id).then(r => this.setState({last: r}));
-    //this._retrieveData();
   };
 
   constructor(props) {
@@ -38,22 +33,6 @@ class HomeScreen extends Component {
       last: [],
     };
   }
-
-  _retrieveData = async () => {
-    try {
-      let temp = this.state.dates;
-      for (let i = 1; i <= TRAININGS; i++) {
-        const value = await AsyncStorage.getItem('exc' + i);
-        if (value !== null) {
-          let json = JSON.parse(value);
-          temp.push(json);
-        }
-      }
-      this.setState({dates: temp});
-    } catch (error) {
-      alert(error);
-    }
-  };
 
   render() {
     return (

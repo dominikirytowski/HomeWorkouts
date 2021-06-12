@@ -7,7 +7,6 @@
  */
 
 import 'react-native-gesture-handler';
-//import 'react-native-reanimated';
 import React, {Component} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
@@ -17,7 +16,6 @@ import HomeScreen from './HomeScreen';
 import WorkoutScreen from './WorkoutScreen';
 import ExercisesScreen from './ExercisesScreen';
 import SummaryScreen from './SummaryScreen';
-import TRAININGS from './trainingsGeneral';
 import NetInfo from '@react-native-community/netinfo';
 import {getTrainings} from './NetworkingImpl';
 import ProductComponent from './ProductComponent';

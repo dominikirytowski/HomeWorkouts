@@ -1,13 +1,11 @@
 import 'react-native-gesture-handler';
-//import 'react-native-reanimated';
-import React, {Component, useState} from 'react';
-import {View, TouchableOpacity, Text, TouchableHighlight} from 'react-native';
+import React from 'react';
+import {View} from 'react-native';
 
 import ChangeExercise from './ChangeExercise';
 import Toolbar from './Toolbar';
 import styles from './styles/styles';
 import StopTraining from './StopTraining';
-import Animated from 'react-native-reanimated';
 
 function ExercisesScreen({navigation, route}) {
   const training = route.params.training;

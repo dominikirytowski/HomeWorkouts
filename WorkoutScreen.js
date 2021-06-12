@@ -1,5 +1,4 @@
 import 'react-native-gesture-handler';
-//import 'react-native-reanimated';
 import React, {Component} from 'react';
 import {
   View,
@@ -12,9 +11,6 @@ import {
 } from 'react-native';
 import styles from './styles/styles';
 import Toolbar from './Toolbar';
-import YoutubePlayer from 'react-native-youtube-iframe';
-import gifs from './Gifs';
-import TRAININGSD from './trainingsDetails';
 
 class WorkoutScreen extends Component {
   constructor(props) {

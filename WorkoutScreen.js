@@ -70,6 +70,7 @@ class WorkoutScreen extends Component {
                 training: training,
                 index: 0,
                 length: training.exercises.length,
+                start: new Date().getTime(),
               });
             }}>
             <Text style={styles.start}>START</Text>

@@ -13,6 +13,7 @@ function ExercisesScreen({navigation, route}) {
   const training = route.params.training;
   const length = route.params.length;
   const index = route.params.index;
+  const startTime = route.params.start;
   /*const [bounceValue, setBounceValue] = useState(-300);
   const [buttonText, setButtonText] = useState('Show Help');
   const [isHidden, setIsHidden] = useState(false);
@@ -55,7 +56,7 @@ function ExercisesScreen({navigation, route}) {
               index,
               length,
             )
-          : StopTraining({navigation}, training)}
+          : StopTraining({navigation}, training, startTime)}
       </View>
     </View>
   );

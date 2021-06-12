@@ -4,20 +4,18 @@ import {
   View,
   Text,
   Image,
-  TouchableOpacity,
-  TouchableHighlight,
+  TouchableOpacity
 } from 'react-native';
 import CountDown from 'react-native-countdown-component';
 import styles from './styles/styles';
 import NextExercise from './NextExercise';
 import PrevExercise from './PrevExercise';
-import Animated from 'react-native-reanimated';
 
 function ChangeExercise({navigation}, title, training, index, length) {
   const [key, setKey] = useState(0);
   const [run, setRun] = useState(false);
   const [start, setStart] = useState('START');
-  useEffect(() => {}, []);
+  useEffect(() => {});
   let time = 10;
   if (training.exercises[index].time !== 0) {
     time = training.exercises[index].time;

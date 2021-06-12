@@ -221,6 +221,39 @@ const styles = StyleSheet.create({
     height: 300,
     width: '100%',
   },
+  icon: {
+    width: 120,
+    height: 120,
+  },
+  title: {
+    fontSize: 24,
+    textAlign: 'center',
+    marginTop: 22,
+    color: '#5F6D7A',
+  },
+  description: {
+    marginTop: 20,
+    textAlign: 'center',
+    color: '#9c9c9c',
+    fontSize: 16,
+    margin: 40,
+  },
+  buttonContainer: {
+    height: 45,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
+    width: 250,
+    borderRadius: 30,
+  },
+  loginButton: {
+    backgroundColor: '#3498db',
+  },
+  buttonText: {
+    color: '#FFFFFF',
+    fontSize: 20,
+  },
 });
 
 export default styles;

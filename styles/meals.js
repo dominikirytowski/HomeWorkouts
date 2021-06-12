@@ -4,6 +4,7 @@ const meals = StyleSheet.create({
   containerMeals: {
     flex: 1,
     // backgroundColor: 'blue',
+    width: '100%',
   },
 
   insideMeals: {
@@ -11,6 +12,7 @@ const meals = StyleSheet.create({
     // backgroundColor: 'yellow',
     justifyContent: 'flex-end',
     alignItems: 'center',
+    width: '100%',
   },
 
   containerMealsBtn: {
@@ -20,6 +22,7 @@ const meals = StyleSheet.create({
   },
 
   input: {
+    marginTop: 20,
     height: 50,
     width: 150,
   },
@@ -38,12 +41,29 @@ const meals = StyleSheet.create({
 
   mealDetail: {
     flex: 4,
+    width: '100%',
     // backgroundColor: 'red',
     justifyContent: 'center',
     alignItems: 'center',
   },
   scrollViewStyle: {
     flex: 1,
+    width: '100%',
+  },
+  mealItem: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+  },
+  mealTitle: {
+    fontSize: 24,
+    textAlign: 'center',
+    marginTop: 5,
+    marginBottom: 14,
+    color: '#5F6D7A',
+  },
+  nutritionTable: {
+    width: '100%',
   },
 });
 

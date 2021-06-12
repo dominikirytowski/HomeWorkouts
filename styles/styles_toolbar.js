@@ -25,11 +25,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
     borderColor: 'black',
-    borderBottomWidth: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingLeft: 15,
+
   },
+
 });
 
 export default styles;

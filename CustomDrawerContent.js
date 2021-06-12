@@ -22,6 +22,7 @@ class CustomDrawerContent extends Component {
       trainings: [],
     };
   }
+
   render() {
     const navigation = this.state.navigation;
     return (
@@ -40,6 +41,15 @@ class CustomDrawerContent extends Component {
               });
             }}>
             <Text>Home</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.drawerSection}>
+          <TouchableOpacity
+            style={styles.drawerOption}
+            onPress={() => {
+              navigation.navigate('ProductComponent', {title: 'Meals'});
+            }}>
+            <Text>Meals</Text>
           </TouchableOpacity>
         </View>
         {this.state.trainings.map(n => (

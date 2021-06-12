@@ -161,6 +161,7 @@ const styles = StyleSheet.create({
   listImage: {
     height: '100%',
     width: '100%',
+    resizeMode: 'cover',
     borderRadius: 20,
   },
   listTitle: {
@@ -254,6 +255,11 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 20,
   },
+  input: {
+    height: 50,
+    width: 150,
+  },
+
 });
 
 export default styles;

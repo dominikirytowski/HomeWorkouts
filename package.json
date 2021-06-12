@@ -21,6 +21,9 @@
     "react-native-countdown-component": "^2.7.1",
     "react-native-draggable-flatlist": "^2.5.4",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-keyboard-spacer": "^0.4.1",
+    "react-native-material-design": "^0.3.7",
+    "react-native-paper": "^4.8.1",
     "react-native-reanimated": "^1.9.0",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^2.18.1",
@@ -35,6 +38,7 @@
     "eslint": "7.14.0",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.64.0",
+    "react-native-material-textfield": "^0.16.1",
     "react-test-renderer": "17.0.1"
   },
   "jest": {

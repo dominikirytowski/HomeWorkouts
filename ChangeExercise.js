@@ -6,11 +6,11 @@ import styles from './styles/styles';
 import NextExercise from './NextExercise';
 import PrevExercise from './PrevExercise';
 
-function ChangeExercise({navigation}, title, training, index, length) {
+function ChangeExercise({navigation}, training, index, length) {
   const [key, setKey] = useState(0);
   const [run, setRun] = useState(false);
   const [start, setStart] = useState('START');
-  useEffect(() => {});
+
   let time = 10;
   if (training.exercises[index].time !== 0) {
     time = training.exercises[index].time;
@@ -33,7 +33,7 @@ function ChangeExercise({navigation}, title, training, index, length) {
               setKey(prevKey => prevKey + 1);
               setRun(false);
               setStart('START');
-              NextExercise({navigation}, title, training, index, length);
+              NextExercise({navigation}, training, index, length);
             }}
             digitStyle={{backgroundColor: '#FFF'}}
             digitTxtStyle={{color: '#000'}}
@@ -66,7 +66,7 @@ function ChangeExercise({navigation}, title, training, index, length) {
               setRun(false);
               setStart('START');
             }
-            PrevExercise({navigation}, title, training, index, length);
+            PrevExercise({navigation}, training, index, length);
           }}>
           <Image
             style={styles.goBackImage}
@@ -82,7 +82,7 @@ function ChangeExercise({navigation}, title, training, index, length) {
                 setRun(false);
                 setStart('START');
               }
-              NextExercise({navigation}, title, training, index, length);
+              NextExercise({navigation}, training, index, length);
             }}>
             <Text style={styles.start}>NEXT EXERCISE</Text>
           </TouchableOpacity>
@@ -111,7 +111,7 @@ function ChangeExercise({navigation}, title, training, index, length) {
               setRun(false);
               setStart('START');
             }
-            NextExercise({navigation}, title, training, index, length);
+            NextExercise({navigation}, training, index, length);
           }}>
           <Text style={styles.prevNextText}>Skip</Text>
           <Image

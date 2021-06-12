@@ -1,4 +1,4 @@
-function NextExercise({navigation}, title, training, index, length) {
+function NextExercise({navigation}, training, index, length) {
   if (index - 1 < length) {
     console.log(index);
     navigation.navigate('Exercises', {

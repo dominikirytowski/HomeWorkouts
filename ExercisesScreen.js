@@ -47,13 +47,7 @@ function ExercisesScreen({navigation, route}) {
       </View>*/}
       <View style={styles.trainingExercises}>
         {length > index
-          ? ChangeExercise(
-              {navigation},
-              training.title,
-              training,
-              index,
-              length,
-            )
+          ? ChangeExercise({navigation}, training, index, length)
           : StopTraining({navigation}, training, startTime)}
       </View>
     </View>

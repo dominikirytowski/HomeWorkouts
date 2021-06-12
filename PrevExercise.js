@@ -1,4 +1,4 @@
-function PrevExercise({navigation}, title, training, index, length) {
+function PrevExercise({navigation}, training, index, length) {
   if (index > 0) {
     navigation.navigate('Exercises', {
       training: training,

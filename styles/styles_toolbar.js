@@ -27,9 +27,7 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     flexDirection: 'row',
     alignItems: 'center',
-
   },
-
 });
 
 export default styles;

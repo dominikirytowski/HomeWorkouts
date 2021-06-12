@@ -1,11 +1,6 @@
 import 'react-native-gesture-handler';
 import React, {useState, useEffect} from 'react';
-import {
-  View,
-  Text,
-  Image,
-  TouchableOpacity
-} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import CountDown from 'react-native-countdown-component';
 import styles from './styles/styles';
 import NextExercise from './NextExercise';

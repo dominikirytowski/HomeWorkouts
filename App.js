@@ -22,7 +22,6 @@ import NetInfo from '@react-native-community/netinfo';
 import {getTrainings} from './NetworkingImpl';
 import ProductComponent from './ProductComponent';
 
-
 const Drawer = createDrawerNavigator();
 class App extends Component {
   componentDidMount(): * {
@@ -52,7 +51,7 @@ class App extends Component {
           ))}
           <Drawer.Screen name="Exercises" component={ExercisesScreen} />
           <Drawer.Screen name="Summary" component={SummaryScreen} />
-          <Drawer.Screen name="ProductComponent" component={ProductComponent}/>
+          <Drawer.Screen name="ProductComponent" component={ProductComponent} />
         </Drawer.Navigator>
       </NavigationContainer>
     );

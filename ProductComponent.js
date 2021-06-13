@@ -61,9 +61,7 @@ function ProductComponent({navigation, route}) {
 
   function createItem() {
     if (res !== null) {
-      if (res.status_verbose === 'product not found') {
-        createAlert();
-      } else {
+      if (res.status_verbose !== 'product not found') {
         let jsonData = res.product.nutriments;
         let nutrition = [];
         Object.keys(jsonData).forEach(function (key) {
@@ -150,7 +148,11 @@ function ProductComponent({navigation, route}) {
               })
                 .then(response => response.json())
                 .then(json => {
-                  setResponse(json);
+                  if (json.status_verbose === 'product not found') {
+                    createAlert();
+                  } else {
+                    setResponse(json);
+                  }
                 })
                 .catch(error => {
                   console.log(error);

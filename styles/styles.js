@@ -259,6 +259,11 @@ const styles = StyleSheet.create({
     height: 50,
     width: 150,
   },
+  numberOf: {
+    fontSize: 20,
+    alignSelf: 'flex-end',
+    marginRight: 15,
+  },
 });
 
 export default styles;

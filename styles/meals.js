@@ -65,6 +65,14 @@ const meals = StyleSheet.create({
   nutritionTable: {
     width: '100%',
   },
+  avoid: {
+    height: 600,
+    backgroundColor: 'red',
+  },
+  status: {
+    padding: 10,
+    textAlign: 'center',
+  },
 });
 
 export default meals;

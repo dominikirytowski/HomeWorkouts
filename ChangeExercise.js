@@ -18,6 +18,9 @@ function ChangeExercise({navigation}, training, index, length) {
 
   return (
     <View style={styles.trainingExercises}>
+      <Text style={styles.numberOf}>
+        Exercise: {index + 1} / {length}
+      </Text>
       <View style={styles.exerciseClock}>
         {training.exercises[index].time === 0 ? (
           <View style={styles.repsTime}>
@@ -51,7 +54,6 @@ function ChangeExercise({navigation}, training, index, length) {
           resizeMode="contain"
           style={styles.exerciseGif}
         />
-        {console.log(training.exercises[index].gif)}
       </View>
       <View style={styles.exerciseTitleView}>
         <Text style={styles.exerciseTitle}>

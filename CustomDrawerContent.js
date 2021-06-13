@@ -29,7 +29,9 @@ class CustomDrawerContent extends Component {
       <DrawerContentScrollView style={styles.drawerScroll}>
         <Text style={styles.drawerTitle}>Fitness</Text>
         <Image
-          source={require('./imgs/deadlift.jpg')}
+          source={{
+            uri: 'https://post.healthline.com/wp-content/uploads/2019/10/Female_Male_Rope_Workout_1200x628-facebook.jpg',
+          }}
           style={styles.drawerImage}
         />
         <View style={styles.drawerSection}>

@@ -7,13 +7,13 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   drawerImage: {
-    height: 100,
-    width: 120,
+    height: 200,
+    width: '100%',
     alignSelf: 'center',
-    resizeMode: 'stretch',
+    resizeMode: 'contain',
   },
   drawerScroll: {
-    backgroundColor: '#09A62B',
+    backgroundColor: 'lightgrey',
     color: 'red',
     borderColor: 'black',
     borderWidth: 1,
@@ -21,10 +21,9 @@ const styles = StyleSheet.create({
   drawerTitle: {
     fontSize: 32,
     alignSelf: 'center',
-    margin: 10,
   },
   drawerOption: {
-    backgroundColor: '#009791',
+    backgroundColor: 'grey',
     alignItems: 'center',
     paddingLeft: 20,
     justifyContent: 'center',
